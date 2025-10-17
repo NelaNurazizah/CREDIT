@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Prediksi</title>
+    <style>
+        body {font-family: Arial; background: #f8f8f8; padding: 20px;}
+        .result-box {background: white; padding: 20px; border-radius: 10px; width: 300px;}
+        h2 {color: #2e5b85;}
+        .risk {font-weight: bold; color: #c0392b;}
+        .safe {font-weight: bold; color: #27ae60;}
+        a {text-decoration: none; color: #2e5b85;}
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Hasil Prediksi</h2>
+        {% if prediction == 'Berisiko Gagal Bayar' %}
+            <p class="risk">{{ prediction }}</p>
+        {% else %}
+            <p class="safe">{{ prediction }}</p>
+        {% endif %}
+        <p>Probabilitas: {{ probability }}%</p>
+        <a href="/">Kembali</a>
+    </div>
+</body>
+</html>

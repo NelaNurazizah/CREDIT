@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Risiko Kartu Kredit</title>
+    <style>
+        body {font-family: Arial; background: #f8f8f8; padding: 20px;}
+        h2 {color: #2e5b85;}
+        form {background: white; padding: 20px; border-radius: 10px; width: 300px;}
+        input, select {width: 100%; margin-bottom: 10px; padding: 8px;}
+        button {width: 100%; padding: 10px; background: #2e5b85; color: white; border: none; cursor: pointer;}
+        button:hover {background: #447ebd;}
+    </style>
+</head>
+<body>
+    <h2>Prediksi Risiko Gagal Bayar</h2>
+    <form action="/predict" method="post">
+        <label>Batas Kredit (LIMIT_BAL)</label>
+        <input type="number" name="LIMIT_BAL" required>
+
+        <label>Usia (AGE)</label>
+        <input type="number" name="AGE" required>
+
+        <label>Tagihan Bulan ke-1 (BILL_AMT1)</label>
+        <input type="number" name="BILL_AMT1" required>
+
+        <label>Tagihan Bulan ke-2 (BILL_AMT2)</label>
+        <input type="number" name="BILL_AMT2" required>
+
+        <label>Tagihan Bulan ke-3 (BILL_AMT3)</label>
+        <input type="number" name="BILL_AMT3" required>
+
+        <label>Jenis Kelamin (SEX)</label>
+        <select name="SEX" required>
+            <option value="1">Laki-laki</option>
+            <option value="2">Perempuan</option>
+        </select>
+
+        <label>Status Pernikahan (MARRIAGE)</label>
+        <select name="MARRIAGE" required>
+            <option value="1">Menikah</option>
+            <option value="2">Lajang</option>
+            <option value="3">Lainnya</option>
+        </select>
+
+        <label>Pendidikan (EDUCATION)</label>
+        <select name="EDUCATION" required>
+            <option value="1">S2/S3</option>
+            <option value="2">S1</option>
+            <option value="3">SMA</option>
+            <option value="4">Lainnya</option>
+        </select>
+
+        <button type="submit">Prediksi</button>
+    </form>
+</body>
+</html>
