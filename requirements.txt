@@ -1,8 +1,8 @@
-flask==3.0.3
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.5.2
-joblib==1.4.2
-imbalanced-learn==0.12.3
-matplotlib==3.9.2
-seaborn==0.13.2
+flask
+pandas
+numpy
+scikit-learn
+joblib
+imbalanced-learn
+matplotlib
+seaborn
